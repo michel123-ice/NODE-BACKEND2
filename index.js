@@ -4,9 +4,9 @@ import { fileURLToPath } from "url";
 import mongoose from 'mongoose'
 import cookieParser from "cookie-parser";   
 import { config } from "dotenv";
-import { del1post, forSignup, get1post, getAllPost, update1post } from "./controllers/postController.js";
-import user from "./Models/User.js";
 config()
+import userRouter from './routes/userRoutes.js';
+import postRouter from './routes/postRoutes.js';
 // const express = require('express');
 // const path = require('path');
 const app = e();

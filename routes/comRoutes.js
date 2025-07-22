@@ -1,5 +1,5 @@
 import e from "express";
-import { createComment, del1Comment, get1comment, getAllComments, update1Comment } from "../controller/comController.js";
+import { createComment, del1Comment, get1comment, getAllComments, update1Comment } from "../controllers/comController.js";
 import authorize from "../middlewares/authorize.js";
 const router = e.Router();
 
