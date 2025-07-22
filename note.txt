@@ -1,0 +1,19 @@
+CRUD operation 
+Create - 
+Read - 
+Update - 
+Delete - 
+
+
+HTTP Method 
+    GET - Read 
+    POST - Create 
+    PUT - Update 
+    DELETE - Delete 
+
+Authetication And Authorization
+
+Authetication deals with checking the credentials of a user and giving a token.
+
+Authorization deals with allowing users to access certain routes usually based on the roles of that user.
+    
