@@ -119,5 +119,4 @@ const update1User = async (req, res) => {
 
 
 
-export {
-    getAllUsers, get1user, del1User, update1User,forSignup, forLogin };
+export { getAllUsers, get1user, del1User, update1User,forSignup, forLogin };
