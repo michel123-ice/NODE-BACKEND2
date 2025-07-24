@@ -26,6 +26,8 @@ app.use(e.urlencoded({extended:true}))
 
 app.use(e.static('./box'))
 
+app.use
+
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'box','index.html'))
 })
