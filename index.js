@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import mongoose from 'mongoose'
 import cookieParser from "cookie-parser";   
 import { config } from "dotenv";
+import cors from 'cors';
 config()
 import userRouter from './routes/userRoutes.js';
 import postRouter from './routes/postRoutes.js';
@@ -26,7 +27,10 @@ app.use(e.urlencoded({extended:true}))
 
 app.use(e.static('./box'))
 
-app.use
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+}));
 
 app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'box','index.html'))
