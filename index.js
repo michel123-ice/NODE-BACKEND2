@@ -28,7 +28,7 @@ app.use(e.urlencoded({extended:true}))
 app.use(e.static('./box'))
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:5173',
     credentials: true,
 }));
 
