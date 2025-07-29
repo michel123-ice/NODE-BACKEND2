@@ -6,9 +6,9 @@ import sendEmail from '../sendEmail.js';
 
 const forSignup = async (req, res) => {
     try {
-        let { firstname, lastname, email, password, role } = req.body;
+        let { fullname, email, password, } = req.body;
 
-        if (!firstname || !lastname || !email || !password) {
+        if (!fullname || !email || !password) {
             res.status(500).json({message:"All fields are required!"})
         }
 
@@ -20,8 +20,7 @@ const forSignup = async (req, res) => {
         let hasshedPassword = await bcrypt.hash(password, 10);
 
         const newUser = await User.create({
-          firstname,
-          lastname,
+          fullname,
           email,
           password: hasshedPassword,
         });
@@ -29,7 +28,7 @@ const forSignup = async (req, res) => {
         const welcomeMail = `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
             <h1 style="text-align:center">Welcome to Our Platform <img src="" width="70px" /></h1>
-            <p>Dear ${firstname} ${lastname},</p>\n\n
+            <p>Dear ${fullname},</p>\n\n
             <p> Welcome to our platform! We're excited to have you on board.\n\n</p>
             <ol>
                 <li>Explore our features and services.</li>

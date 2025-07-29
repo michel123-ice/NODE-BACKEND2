@@ -16,7 +16,7 @@ const sendEmail = async (to, subject, html) => {
       from: `"No Reply <${process.env.EMAIL_USER}>`,
       to,
       subject,
-      text,
+      html,
     };
 
     const info = await transporter.sendMail(mailOptions);
