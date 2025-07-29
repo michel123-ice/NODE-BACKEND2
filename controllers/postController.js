@@ -1,4 +1,4 @@
-import post from '../Models/post.js';
+import Post from '../Models/post.js';
 import bcrypt from 'bcryptjs'; 
 
 const createPost = async (req, res) => {
