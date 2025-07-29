@@ -2,15 +2,15 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    tittle: {
+    fullname: {
         type: String,
         require: true
     },
-    snippet: {
+    email: {
         type: String,
         require: true 
     },
-    content: {
+    password: {
         type: String,
         require: true
     }
