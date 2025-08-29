@@ -66,7 +66,7 @@ const forLogin = async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
- secure: process.env.NODE_ENV === 'production',
+            secure: process.env.NODE_ENV === 'production',
             sameSite: 'lax',
             maxAge: 3 * 60 * 60 * 1000
         });
@@ -75,7 +75,7 @@ const forLogin = async (req, res) => {
 
     } catch (error) {
         console.log(error)
-        res.status(500).json({message:"Internal server error"})
+        // res.status(500).json({message:"Internal server error"})
     }
 }
 
